@@ -19,14 +19,13 @@ class const:
     """
     def __setattr__(self, name: str, value: Any) -> None:
         
-        if len(self.__dict__) > 0:
+        if len(self.__dict__) > 0 and name not in self.__dict__:
             raise RuntimeError("Instance cannot contain more than one attribute")
 
-        if name in self.__setattr__:
+        if name in self.__dict__:
             raise RuntimeError(f"Cannot reassign const attribute: {name}")
 
-        else:
-            super().__setattr__(name, value)
+        super().__setattr__(name, value)
 
     """
     Return dictionary key value of name and assigned value

@@ -26,6 +26,7 @@
     <Compile Include="constants\__init__.py" />
     <Compile Include="setup.py" />
     <Compile Include="tests\test_simple.py" />
+    <Compile Include="tests\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="constants\" />
