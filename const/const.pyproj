@@ -25,9 +25,11 @@
     <Compile Include="constants\const.py" />
     <Compile Include="constants\__init__.py" />
     <Compile Include="setup.py" />
+    <Compile Include="tests\test_simple.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="constants\" />
+    <Folder Include="tests\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
