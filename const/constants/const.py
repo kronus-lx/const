@@ -1,9 +1,10 @@
-# Wrapper container for const variable similar to C-style const
+# const type variable similar to C-style const
 
 # Initialisation is done through either assignment or through the constructor
 
 # Instance can only contain only one attribute at one time otherwise it will though a runtime error
 
+# Attempts at overwriting will cause a RuntimeError
 
 from typing import Any
 
@@ -33,6 +34,8 @@ class const:
     def release(self) -> dict:
         return self.__dict__
 
-   
+    """
+    Clear content of object upon going out of scope
+    """
     def __del__(self) -> None:
         self.__dict__.clear()
