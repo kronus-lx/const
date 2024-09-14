@@ -9,7 +9,7 @@
 from typing import Any
 
 class const:
-
+    
     def __init__(self, name=None, value=None):
         
         if name is not None and value is not None:
